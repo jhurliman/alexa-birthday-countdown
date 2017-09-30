@@ -1,0 +1,41 @@
+{
+  "intents": [
+    {
+      "intent": "GetPerson",
+      "samples": [
+        "{Person}",
+        "for {Person}",
+        "for {Person} birthday",
+        "until {Person} birthday"
+      ],
+      "slots": [
+        {
+          "name": "Person",
+          "type": "AMAZON.US_FIRST_NAME"
+        }
+      ]
+    },
+    {
+      "intent": "GetBirthdate",
+      "samples": ["{Birthdate}", "on {Birthdate}"],
+      "slots": [
+        {
+          "name": "Birthdate",
+          "type": "AMAZON.DATE"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.HelpIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.StopIntent",
+      "slots": []
+    },
+    {
+      "intent": "AMAZON.CancelIntent",
+      "slots": []
+    }
+  ]
+}

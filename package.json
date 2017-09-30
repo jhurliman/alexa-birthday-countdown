@@ -1,0 +1,18 @@
+{
+  "name": "alexa-birthday-countdown",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Alexa Skill - Birthday Countdown",
+  "main": "index.js",
+  "scripts": {
+    "publish":
+      "zip -r9 alexa-birthday-countdown.zip index.js node_modules && aws lambda update-function-code --region=us-east-1 --function-name alexa-birthday-countdown --zip-file fileb://./alexa-birthday-countdown.zip --publish && rm alexa-birthday-countdown.zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Hurliman <jhurliman@jhurliman.org>",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-sdk": "^1.0.14",
+    "moment": "^2.18.1"
+  }
+}

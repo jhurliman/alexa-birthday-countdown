@@ -1,0 +1,6 @@
+GetPerson {Person}
+GetPerson for {Person}
+GetPerson for {Person} birthday
+GetPerson until {Person} birthday
+GetBirthdate {Birthdate}
+GetBirthdate on {Birthdate}

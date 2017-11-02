@@ -46,7 +46,13 @@ const newSessionHandler = {
     this.emit(':tell', STOP_MESSAGE)
   },
   'AMAZON.HelpIntent': function() {
-    this.emit(':tell', HELP_MESSAGE, HELP_REPROMPT)
+    this.emit(':ask', HELP_MESSAGE, HELP_REPROMPT)
+  },
+  LaunchRequest: function() {
+    this.emit(':ask', HELP_MESSAGE, HELP_REPROMPT)
+  },
+  Unhandled: function() {
+    this.emit(':ask', HELP_MESSAGE, HELP_REPROMPT)
   }
 }
 
@@ -86,7 +92,13 @@ const havePersonHandlers = Alexa.CreateStateHandler(STATES.HAVE_PERSON_MODE, {
     this.emit(':tell', STOP_MESSAGE)
   },
   'AMAZON.HelpIntent': function() {
-    this.emit(':tell', HELP_MESSAGE, HELP_REPROMPT)
+    this.emit(':ask', HELP_MESSAGE, HELP_REPROMPT)
+  },
+  LaunchRequest: function() {
+    this.emit(':ask', HELP_MESSAGE, HELP_REPROMPT)
+  },
+  Unhandled: function() {
+    this.emit(':ask', HELP_MESSAGE, HELP_REPROMPT)
   }
 })
 

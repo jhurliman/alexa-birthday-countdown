@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "alexa-sdk": "^1.0.14",
-    "moment": "^2.18.1"
+    "moment": "^2.22.1"
   }
 }
